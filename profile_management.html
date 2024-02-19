@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Client Profile Management</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <!-- You can link additional CSS files here if needed -->
+</head>
+
+<body>
+    <div class="container">
+        <h2>Client Profile Management</h2>
+        <form action="profile_update.php" method="post">
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName" maxlength="50" required><br>
+
+            <label for="address1">Address 1:</label><br>
+            <input type="text" id="address1" name="address1" maxlength="100" required><br>
+
+            <label for="address2">Address 2:</label><br>
+            <input type="text" id="address2" name="address2" maxlength="100"><br>
+
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city" maxlength="100" required><br>
+
+            <label for="state">State:</label><br>
+            <select id="state" name="state" required>
+                <option value="">Select State</option>
+                <!-- Populate state options dynamically or hardcode them -->
+                <option value="TX">Texas</option>
+                <option value="CA">California</option>
+                <!-- Add more states as needed -->
+            </select><br>
+
+            <label for="zipcode">Zipcode:</label><br>
+            <input type="text" id="zipcode" name="zipcode" maxlength="9" pattern="[0-9]{5,9}" required><br>
+
+            <input type="submit" value="Update Profile">
+        </form>
+    </div>
+</body>
+
+</html>
